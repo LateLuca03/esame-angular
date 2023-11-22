@@ -1,5 +1,4 @@
 export interface Sun {
-    results: {
         sunrise: string;
         sunset: string;
         first_light: string;
@@ -11,6 +10,4 @@ export interface Sun {
         day_length: string;
         timezone: string;
         utc_offset: number;
-    }
-    status: string;
 }

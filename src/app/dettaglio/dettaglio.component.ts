@@ -12,8 +12,8 @@ import { Day } from "../model/day.interface";
 export class DettaglioComponent implements OnInit {
     
     coords: CoordinateFormatter = {
-        latitudine: 0,
-        longitudine: 0,
+        latitudine: "",
+        longitudine: "",
     };
 
     lista!: Sun 
@@ -28,24 +28,21 @@ export class DettaglioComponent implements OnInit {
     ngOnInit(): void {
 
         this.route.params.subscribe((coordinate) => {
+
             this.coords.latitudine = coordinate["latitudine"];
             this.coords.longitudine = coordinate["longitudine"];
-        });
 
-        this.coordinate
-            .getSunByCoord(this.coords.latitudine, this.coords.longitudine)
-            .subscribe((response: any) => {
-                this.lista = response;
-            });
+            this.coordinate
+                .getSunByCoord(this.coords.latitudine, this.coords.longitudine)
+                .subscribe((response) => {
+                    this.lista = response;
+                });
 
-        this.coordinate
-            .getDayData(this.coords.latitudine, this.coords.longitudine)
-            .subscribe((response: any) => {
-                this.listaMeteo = response;
-            });
-
-        
-
-        
+            this.coordinate
+                .getDayData(this.coords.latitudine, this.coords.longitudine)
+                .subscribe((response) => {
+                    this.listaMeteo = response;
+                });
+        });        
     }
 }

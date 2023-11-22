@@ -6,7 +6,7 @@ import { DettaglioComponent } from './dettaglio/dettaglio.component';
 const routes: Routes = [
     { path: "home", component: HomeComponent },
     { path: "", redirectTo: "/home", pathMatch: "full" },
-    { path: "dettaglio/:lat/:lon", component: DettaglioComponent }
+    { path: "home/dettaglio/:latitudine/:longitudine", component: DettaglioComponent }
     // { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 

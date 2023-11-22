@@ -1,4 +1,4 @@
 export interface CoordinateFormatter {
-    latitudine: number;
-    longitudine: number;
+    latitudine: string;
+    longitudine: string;
 }

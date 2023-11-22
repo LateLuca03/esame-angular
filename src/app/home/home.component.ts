@@ -9,19 +9,17 @@ import { CoordinateFormatter } from "../model/coordinate.inteface";
 export class HomeComponent implements OnInit {
     
     coordinate: CoordinateFormatter = {
-        latitudine: 0,
-        longitudine: 0,
+        latitudine: "",
+        longitudine: "",
     }
     
-    latitudine: number = 0
-    longitudine: number = 0
+    latitudine: string = ""
+    longitudine: string = ""
 
-    cerca(latitudine: number, longitudine: number){
+    cerca(latitudine: string, longitudine: string){
 
         this.coordinate.latitudine = latitudine;
         this.coordinate.longitudine = longitudine;
-
-        this.router.navigate(["/dettaglio", this.coordinate])
 
     }
 
