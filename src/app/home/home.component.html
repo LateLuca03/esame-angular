@@ -1,0 +1,79 @@
+<h1 class="d-flex justify-content-center align-items-center m-2">Ricerca dati meteo</h1>
+
+<marquee class="m-3 mt-3" behavior="" direction="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat unde quasi amet architecto suscipit molestiae aspernatur, eius voluptatibus, rerum quod vero nesciunt, quo nulla voluptatum! Perspiciatis nesciunt quia tenetur est nam voluptate eos totam libero eveniet atque voluptatibus tempore distinctio velit a cumque accusamus corrupti tempora, ipsum voluptates deleniti iste ratione, quae natus dolores? Nostrum impedit consectetur id et cum! Autem necessitatibus, blanditiis maxime ab accusamus voluptatem iusto ex? Ipsum, ad? Animi possimus dignissimos doloribus. Assumenda corrupti repellendus, atque laboriosam eum repellat animi sunt similique natus unde, itaque totam.</marquee>
+
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div routerLink="..//dettaglio/45/7" class="card p-2 d-flex flex-column align-items-center">
+                    <h2>Torino</h2>
+                    <!-- le immagini inserite non sono basate su una chiamata api -->
+                    <img src="../../assets/img/little-cloudy.png" class="w-50 mt-4" alt="">
+                    <div class="row mt-5">
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunrise: 05:25</p>
+                        </div>
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunset: 19:34</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div routerLink="..//dettaglio/34/-118" class="card p-2 d-flex flex-column align-items-center">
+                    <h2>Los Angeles</h2>
+                    <!-- le immagini inserite non sono basate su una chiamata api -->
+                    <img src="../../assets/img/sun.png" class="w-50 mt-4" alt="">
+                    <div class="row mt-5">
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunrise: 06:30</p>
+                        </div>
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunset: 18:59</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div routerLink="..//dettaglio/35/139" class="card p-2 d-flex flex-column align-items-center">
+                    <h2>Tokyo</h2>
+                    <!-- le immagini inserite non sono basate su una chiamata api -->
+                    <img src="../../assets/img/cloudy.png" class="w-50 mt-4" alt="">
+                    <div class="row mt-5">
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunrise: 06:30</p>
+                        </div>
+                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                            <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
+                            <p class="pt-4">Sunset: 18:59</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="form">
+    <form (ngSubmit)="cerca(latitudine, longitudine)">
+        <div class="row">
+            <div class="col-4">
+                <label for="latitudine" class="me-2">latitudine</label>
+                <input class="rounded-3 border-1" type="number" name="latitudine" [(ngModel)]="latitudine" value="cerca">
+            </div>
+            <div class="col-4">
+                <label for="longitudine" class="me-2">longitudine</label>
+                <input class="rounded-3 border-1" type="number" name="longitudine" [(ngModel)]="longitudine" value="cerca">
+            </div>
+            <div class="col-4">
+                <input class="w-25 rounded-3 border-1" type="submit" name="Invia">
+            </div>
+        </div>
+    </form>
+</section>

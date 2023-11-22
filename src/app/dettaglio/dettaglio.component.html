@@ -1,0 +1,19 @@
+<h2>Risultati</h2>
+
+<!-- {{lista.results.sunset}} -->
+
+<table>
+    <tr *ngFor="let meteo of listaMeteo">
+        <td>
+            {{ meteo.timepoint }}
+        </td>
+        <td>
+            {{ meteo.temp2m }}
+        </td>
+        <td>
+            <img src={{ meteo.image }} class="icon" alt="icon-meteo">
+        </td>
+    </tr>
+</table>
+
+<img id="back" routerLink="/home" src="../../assets/img/arrow.png" alt="back">
