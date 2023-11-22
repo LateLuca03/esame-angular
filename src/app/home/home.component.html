@@ -6,52 +6,52 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <div routerLink="..//dettaglio/45/7" class="card p-2 d-flex flex-column align-items-center">
-                    <h2>Torino</h2>
-                    <!-- le immagini inserite non sono basate su una chiamata api -->
-                    <img src="../../assets/img/little-cloudy.png" class="w-50 mt-4" alt="">
-                    <div class="row mt-5">
-                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
-                            <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunrise: 05:25</p>
+                <div routerLink="dettaglio/45/7" class="card card0 p-2 d-flex flex-column align-items-center">
+                        <h2>Torino</h2>
+                        <!-- le immagini inserite non sono basate su una chiamata api -->
+                        <img src="../../assets/img/little-cloudy.png" class="w-50 mt-4" alt="">
+                        <div class="row mt-5 bg-v rounded-3">
+                            <div class="d-flex col-6 justify-content-center align-items-center bg-visibility">
+                                <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
+                                <p class="pt-4">{{lista[0].sunrise}}</p>
+                            </div>
+                            <div class="d-flex col-6 p-2 justify-content-center align-items-center">
+                                <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
+                                <p class="pt-4">{{lista[0].sunset}}</p>
+                            </div>
                         </div>
-                        <div class="d-flex col-6 p-2 justify-content-center align-items-center">
-                            <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunset: 19:34</p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-4">
-                <div routerLink="..//dettaglio/34/-118" class="card p-2 d-flex flex-column align-items-center">
+                <div routerLink="dettaglio/34/-118" class="card card1 p-2 d-flex flex-column align-items-center">
                     <h2>Los Angeles</h2>
                     <!-- le immagini inserite non sono basate su una chiamata api -->
                     <img src="../../assets/img/sun.png" class="w-50 mt-4" alt="">
-                    <div class="row mt-5">
+                    <div class="row mt-5 bg-v rounded-3">
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunrise: 06:30</p>
+                            <p class="pt-4">{{lista[1].sunrise}}</p>
                         </div>
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunset: 18:59</p>
+                            <p class="pt-4">{{lista[1].sunset}}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-4">
-                <div routerLink="..//dettaglio/35/139" class="card p-2 d-flex flex-column align-items-center">
+                <div routerLink="dettaglio/35/139" class="card card2 p-2 d-flex flex-column align-items-center">
                     <h2>Tokyo</h2>
                     <!-- le immagini inserite non sono basate su una chiamata api -->
                     <img src="../../assets/img/cloudy.png" class="w-50 mt-4" alt="">
-                    <div class="row mt-5">
+                    <div class="row mt-5 bg-v rounded-3">
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunrise: 06:30</p>
+                            <p class="pt-4">{{lista[2].sunrise}}</p>
                         </div>
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunset.png" class="w-25" alt="sunrise">
-                            <p class="pt-4">Sunset: 18:59</p>
+                            <p class="pt-4">{{lista[2].sunset}}</p>
                         </div>
                     </div>
                 </div>

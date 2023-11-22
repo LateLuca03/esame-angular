@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { CoordinateFormatter } from "../model/coordinate.inteface";
+import { ApiService } from "../services/api.service";
 
 @Component({
     selector: "app-home",
@@ -12,6 +13,8 @@ export class HomeComponent implements OnInit {
         latitudine: "",
         longitudine: "",
     }
+
+    lista: any[] = []
     
     latitudine: string = ""
     longitudine: string = ""
@@ -24,14 +27,31 @@ export class HomeComponent implements OnInit {
     }
 
     constructor(
-        private router: Router
+        private router: Router,
+        private apiService: ApiService
     ){}
 
     
 
     ngOnInit(): void {
 
-        
-        
+        //chiamata per torino
+        this.apiService
+            .getSunByCoord("45", "7")
+                .subscribe((response) => {
+                    this.lista.push(response)
+                })
+        //chiamata LA
+        this.apiService
+            .getSunByCoord("34", "-118")
+                .subscribe((response) => {
+                    this.lista.push(response)
+                })
+        //chiamata tokyo
+        this.apiService
+            .getSunByCoord("35", "139")
+                .subscribe((response) => {
+                    this.lista.push(response)
+                })
     }
 }

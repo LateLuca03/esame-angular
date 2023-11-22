@@ -4,7 +4,11 @@ body{
     color: white
 }
 
-
+.bg-v{
+  background-color: rgba(240, 248, 255, 0.3);
+  border: 1px solid #fefefe;
+  margin: -3px;
+}
 
 .card{
 
@@ -14,7 +18,38 @@ body{
     border: 1px solid #fefefe;
     color: white;
     cursor: pointer;
+    transition: background 0.8s;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+}
 
+.card0{
+  background: url('https://hips.hearstapps.com/hmg-prod/images/torino-with-mole-antonelliana-and-the-alps-royalty-free-image-1643015862.jpg') left center no-repeat;
+  background-size: cover;
+}
+  .card0:hover{
+    background: url('https://hips.hearstapps.com/hmg-prod/images/torino-with-mole-antonelliana-and-the-alps-royalty-free-image-1643015862.jpg') center center no-repeat;
+    background-size: 600px;
+}
+
+.card1{
+  background: url('https://www.multimediatravel.com/wp-content/uploads/sites/47/2021/12/tour-los-angeles-2022-dall-italia.jpg') left center no-repeat;
+  background-size: cover;
+}
+
+.card1:hover{
+    background: url('https://www.multimediatravel.com/wp-content/uploads/sites/47/2021/12/tour-los-angeles-2022-dall-italia.jpg') center center no-repeat;
+    background-size: 600px;
+}
+
+.card2{
+  background: url('https://images6.alphacoders.com/109/1092054.jpg') left center no-repeat;
+  background-size: cover;
+}
+  .card2:hover{
+    background: url('https://images6.alphacoders.com/109/1092054.jpg') center center no-repeat;
+    background-size: 710px;
 }
 
 .icon{
