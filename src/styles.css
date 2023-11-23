@@ -75,9 +75,15 @@ body{
 
 .bg-dettaglio{
   background: rgb(171,64,236);
-  background: radial-gradient(circle, rgba(171,64,236,1) 0%, rgba(148,187,233,1) 100%);
+  background: radial-gradient(circle, rgba(171,64,236,1) 0%, rgba(26,115,221,1) 100%);
   border-radius: 25px;
   padding-bottom: 30px;
+}
+
+.bg-form{
+  background: rgb(171,64,236);
+  background: linear-gradient(270deg, rgba(171,64,236,1) 0%, rgba(26,115,221,1) 100%);
+  border-radius: 25px;
 }
 
 tr{
