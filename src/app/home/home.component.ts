@@ -14,7 +14,8 @@ export class HomeComponent implements OnInit {
         longitudine: "",
     }
 
-    lista: any[] = []
+    lista: any[] = [];
+    listaDay: any[] = [];
     
     latitudine: string = ""
     longitudine: string = ""
@@ -41,17 +42,31 @@ export class HomeComponent implements OnInit {
                 .subscribe((response) => {
                     this.lista.push(response)
                 })
+        this.apiService
+            .getDayData("45", "7")
+                .subscribe((response) => {
+                    this.listaDay = response;
+                })
         //chiamata LA
         this.apiService
             .getSunByCoord("34", "-118")
                 .subscribe((response) => {
                     this.lista.push(response)
                 })
+        this.apiService
+            .getDayData("34", "-118").subscribe((response) => {
+                this.listaDay = response;
+            });
         //chiamata tokyo
         this.apiService
             .getSunByCoord("35", "139")
                 .subscribe((response) => {
                     this.lista.push(response)
                 })
+        this.apiService
+            .getDayData("35", "139")
+            .subscribe((response) => {
+                this.listaDay = response;
+            });
     }
 }

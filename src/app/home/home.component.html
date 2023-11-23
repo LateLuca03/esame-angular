@@ -8,8 +8,14 @@
             <div class="col-4">
                 <div routerLink="dettaglio/45/7" class="card card0 p-2 d-flex flex-column align-items-center">
                         <h2>Torino</h2>
-                        <!-- le immagini inserite non sono basate su una chiamata api -->
-                        <img src="../../assets/img/little-cloudy.png" class="w-50 mt-4" alt="">
+                        <div class="row mt-5">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <img [src]="listaDay[0].image" class="w-75" alt="">
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <p class="font-card">{{listaDay[0].temp2m}}°</p>
+                            </div>
+                        </div>
                         <div class="row mt-5 bg-v rounded-3">
                             <div class="d-flex col-6 justify-content-center align-items-center bg-visibility">
                                 <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
@@ -25,8 +31,14 @@
             <div class="col-4">
                 <div routerLink="dettaglio/34/-118" class="card card1 p-2 d-flex flex-column align-items-center">
                     <h2>Los Angeles</h2>
-                    <!-- le immagini inserite non sono basate su una chiamata api -->
-                    <img src="../../assets/img/sun.png" class="w-50 mt-4" alt="">
+                    <div class="row mt-5">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <img [src]="listaDay[1].image" class="w-75" alt="">
+                        </div>
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <p class="font-card">{{listaDay[1].temp2m}}°</p>
+                        </div>
+                    </div>
                     <div class="row mt-5 bg-v rounded-3">
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">
@@ -42,8 +54,14 @@
             <div class="col-4">
                 <div routerLink="dettaglio/35/139" class="card card2 p-2 d-flex flex-column align-items-center">
                     <h2>Tokyo</h2>
-                    <!-- le immagini inserite non sono basate su una chiamata api -->
-                    <img src="../../assets/img/cloudy.png" class="w-50 mt-4" alt="">
+                    <div class="row mt-5">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <img [src]="listaDay[2].image" class="w-75" alt="">
+                        </div>
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <p class="font-card">{{listaDay[2].temp2m}}°</p>
+                        </div>
+                    </div>
                     <div class="row mt-5 bg-v rounded-3">
                         <div class="d-flex col-6 p-2 justify-content-center align-items-center">
                             <img src="../../assets/img/sunrise.png" class="w-25" alt="sunrise">

@@ -87,3 +87,8 @@ tr{
 td{
   text-align: center;
 }
+
+.font-card{
+  font-size: 72px;
+  margin-top: 5px;
+}
