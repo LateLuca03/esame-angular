@@ -1,7 +1,8 @@
 body{
     background: rgb(0,128,255);
     background: linear-gradient(140deg, rgba(0,128,255,1) 48%, rgba(255,255,255,1) 100%);
-    color: white
+    background-size: cover;
+    color: white;
 }
 
 .bg-v{
@@ -22,6 +23,7 @@ body{
     overflow: hidden;
     display: flex;
     position: relative;
+    
 }
 
 .card0{
@@ -53,7 +55,7 @@ body{
 }
 
 .icon{
-    width: 5%;
+    width: 10%;
 }
 
 #form{
@@ -68,4 +70,20 @@ body{
     width: 60px;
     cursor: pointer;
 
+}
+
+table{
+  background-color: rgba(240, 248, 255, 0.3);
+}
+
+tr, td{
+  border: 1px solid white;
+}
+
+tr{
+  height: 56px;
+}
+
+td{
+  text-align: center;
 }

@@ -25,7 +25,7 @@ export class ApiService {
     getDayData(lat: string, long: string) {
         return this.http.get(this.baseUrlDay + `lon=${long}&lat=${lat}`).pipe(
             map((response: any) => {
-                /* response.dataseries.forEach((element: any) => {
+                response.dataseries.forEach((element: any) => {
 
                 if (element.cloudcover <= 2) {
                     element.image = "../assets/img/sun.png";
@@ -38,7 +38,7 @@ export class ApiService {
                     element.image = "../assets/img/cloudy.png";
                 }
                 
-            }); */
+            });
 
                 return response.dataseries as Day[];
             })

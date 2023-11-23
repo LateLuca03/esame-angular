@@ -1,19 +1,32 @@
-<h2>Risultati</h2>
-
-{{lista.sunset}}
-
-<table>
-    <tr *ngFor="let meteo of listaMeteo">
-        <td>
-            {{ meteo.timepoint }}
-        </td>
-        <td>
-            {{ meteo.temp2m }}
-        </td>
-        <td>
-            <img src={{ meteo.image }} class="icon" alt="icon-meteo">
-        </td>
-    </tr>
-</table>
+<section class="d-flex justify-content-center flex-column align-items-center">
+    <h2>Risultati</h2>
+    
+    {{lista.sunset}}
+    
+    <div class="container">
+        <table class="w-100">
+            <thead>
+                <tr>
+                    <td>Ora</td>
+                    <td>Tempo</td>
+                    <td>Temperatura</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let meteo of listaMeteo" class="border-1">
+                    <td class="col-4">
+                        {{ meteo.timepoint }}
+                    </td>
+                    <td class="border-1 p-2 col-4">
+                        <img [src]="meteo.image" class="icon" alt="icon-meteo">
+                    </td>
+                    <td class="col-4">
+                        {{ meteo.temp2m }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
 <img id="back" routerLink="/home" src="../../assets/img/arrow.png" alt="back">
